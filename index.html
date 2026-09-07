@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE EL BURROS | Portuguese-American Rock</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
+    line-height:1.5;
+  }
+  .hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 50% 80%, rgba(190,30,30,.35), transparent 35%),
+      linear-gradient(135deg,#050505,#161616 50%,#050505);
+  }
+  .hero:before{
+    content:"";
+    position:absolute;inset:0;
+    background:repeating-linear-gradient(115deg,transparent 0 55px,rgba(255,255,255,.025) 56px 58px);
+  }
+  .hero-content{position:relative;z-index:1;max-width:950px}
+  .flag{font-size:2rem;letter-spacing:10px;margin-bottom:15px}
+  h1{
+    font-size:clamp(3.5rem,12vw,9rem);
+    line-height:.85;
+    font-weight:1000;
+    letter-spacing:-5px;
+    text-shadow:5px 5px 0 #b51f24;
+  }
+  .tagline{
+    margin:25px 0 35px;
+    font-size:clamp(1rem,3vw,1.5rem);
+    text-transform:uppercase;
+    letter-spacing:5px;
+    color:#ddd;
+  }
+  .btn{
+    display:inline-block;padding:15px 28px;margin:7px;
+    color:#fff;text-decoration:none;font-weight:800;
+    border:2px solid #fff;text-transform:uppercase;letter-spacing:2px;
+    transition:.2s;
+  }
+  .btn:hover{background:#fff;color:#080808;transform:translateY(-2px)}
+  section{padding:85px 20px;max-width:1100px;margin:auto}
+  .section-title{
+    font-size:2.6rem;text-transform:uppercase;
+    margin-bottom:35px;border-left:7px solid #b51f24;padding-left:15px;
+  }
+  .about{font-size:1.2rem;color:#ccc;max-width:800px}
+  .album{
+    display:grid;grid-template-columns:minmax(250px,430px) 1fr;
+    gap:50px;align-items:center;
+  }
+  .cover{
+    width:100%;display:block;
+    border:5px solid #222;
+    box-shadow:0 20px 50px rgba(0,0,0,.6);
+  }
+  .album-info h3{font-size:2rem;margin-bottom:10px}
+  .album-info p{color:#bbb;margin-bottom:20px}
+  .tracklist{list-style:none}
+  .tracklist li{
+    padding:14px 0;border-bottom:1px solid #292929;
+    display:flex;justify-content:space-between;color:#ddd
+  }
+  .cards{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+  }
+  .card{
+    background:#151515;border:1px solid #292929;padding:25px;
+    min-height:150px
+  }
+  .card h3{margin-bottom:8px;color:#fff}
+  .card p{color:#aaa}
+  .contact{text-align:center;background:#111;max-width:none}
+  .contact-inner{max-width:900px;margin:auto}
+  footer{
+    text-align:center;padding:30px 20px;color:#777;
+    border-top:1px solid #222;font-size:.9rem
+  }
+  @media(max-width:750px){
+    .album{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}
+    h1{letter-spacing:-2px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="flag">🇵🇹 🇺🇸</div>
+    <h1>THE EL BURROS</h1>
+    <p class="tagline">Portuguese-American Rock</p>
+    <a class="btn" href="#music">Listen</a>
+    <a class="btn" href="#rock">Rock Ingredients</a>
+    <a class="btn" href="#band">Meet The Band</a>
+  </div>
+</header>
+
+<section id="band">
+  <h2 class="section-title">The Band</h2>
+  <p class="about">
+    Welcome to <strong>THE EL BURROS</strong> — a Portuguese-American rock band
+    bringing big energy, loud guitars, and family-style fun to the stage.
+    This is the official home for our music, photos, shows, and everything EL BURROS.
+  </p>
+</section>
+
+<section id="music">
+  <h2 class="section-title">Latest Album</h2>
+  <div class="album">
+    <img class="cover" src="album-cover.jpg" alt="THE EL BURROS album cover">
+    <div class="album-info">
+      <h3>MASTER OF DESTRUCTION</h3>
+      <p>THE EL BURROS — Rock Mix. Vocals polished with EQ, compression and a touch of reverb, backed by drums, bass and distorted rock guitars.</p>
+      <audio id="elburros-player" controls preload="metadata" playsinline style="width:100%;margin:10px 0 25px">
+        <source src="Master_Of_Destruction.mp3" type="audio/mpeg">
+        <source src="Master_Of_Destruction_THE_EL_BURROS_Rock_Mix.m4a" type="audio/mp4">
+        Your browser does not support audio playback.
+      </audio>
+      <p id="audio-status" style="color:#999;font-size:.9rem">Press ▶ to play “Master of Destruction.”</p>
+      <ul class="tracklist">
+        <li><span>01. Coming Soon</span><span>—</span></li>
+        <li><span>02. Coming Soon</span><span>—</span></li>
+        <li><span>03. Coming Soon</span><span>—</span></li>
+        <li><span>04. Coming Soon</span><span>—</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="rock">
+  <h2 class="section-title">Rock Ingredients</h2>
+  <div class="cards">
+    <div class="card"><h3>🎸 Distorted Guitars</h3><p>Crunchy power-chord layers for a bigger rock sound.</p></div>
+    <div class="card"><h3>🥁 Live-Style Drums</h3><p>Kick, snare and hi-hat grooves driving the song.</p></div>
+    <div class="card"><h3>🎵 Bass</h3><p>Low-end bass lines underneath the guitar riff.</p></div>
+    <div class="card"><h3>🎤 Polished Vocals</h3><p>EQ, compression and subtle ambience to help the lead vocal cut through.</p></div>
+    <div class="card"><h3>🔥 Stage Energy</h3><p>Black, red and fire-inspired visuals for the EL BURROS attitude.</p></div>
+    <div class="card"><h3>🇵🇹🇺🇸 Our Sound</h3><p>Portuguese-American rock with its own identity.</p></div>
+  </div>
+</section>
+
+<section id="shows">
+  <h2 class="section-title">Shows</h2>
+  <div class="cards">
+    <div class="card"><h3>Next Show</h3><p>Coming soon — check back for dates.</p></div>
+    <div class="card"><h3>Live Energy</h3><p>Portuguese-American rock with a whole lot of attitude.</p></div>
+    <div class="card"><h3>Want Us To Play?</h3><p>Contact the band for performance information.</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <h2 class="section-title">Contact</h2>
+    <p class="about" style="margin:0 auto 25px">
+      Want to book THE EL BURROS or keep up with the band?
+      Add your social links and contact information here.
+    </p>
+    <a class="btn" href="mailto:elburros@example.com">Email The Band</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 THE EL BURROS • Portuguese-American Rock 🇵🇹🇺🇸
+</footer>
+
+</body>
+</html>
